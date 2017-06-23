@@ -3,9 +3,7 @@
   @include type-subhead();
 
   display         : inline-block;
-
   padding         : 6px 12px;
-
   text-decoration : none;
   border-radius   : 8px;
 
@@ -35,21 +33,7 @@
   color            : $gray-darker;
 }
 
-// Card
-.card {
-  background-color : $white;
-  color            : $gray-darker;
-  border           : $ui-seperator-width solid rgba($gray, 0.5);
-  border-radius    : $ui-border-radius;
-}
-
-// Swiper
-.swiper-pagination-bullet {
-  opacity          : .25;
-  background-color : $gray-darker;
-}
-
-.swiper-pagination-bullet-active {
-  opacity          : 1;
-  background-color : $blue;
+.pill-large {
+  @include type-headline();
+  padding         : 7px 16px;
 }

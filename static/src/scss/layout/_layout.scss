@@ -8,7 +8,7 @@ body {
 
 body {
   margin: 0;
-  background-color: $gray-light;
+  background-color: $white;
 }
 
 // Header
@@ -49,8 +49,8 @@ body > header {
   }
 
   &.opaque {
-    // background-color:       $gray-light;
-    // border-bottom:          $ui-seperator-width solid $ui-seperator-color;
+    background-color:       $white;
+    border-bottom:          $ui-seperator-width solid $ui-seperator-color;
 
     svg {
       width: 60px;
@@ -66,7 +66,6 @@ body > header {
 
 // Main
 main {
-  height: 100%;
   min-height: 100%;
 }
 
@@ -77,9 +76,9 @@ section {
   padding-bottom: 60px;
   padding-right: 24px;
   padding-left: 24px;
-  background-color: $gray-light;
+  background-color: $white;
 
-  @include media("<tablet", "landscape") {
+  @include media("<tablet") {
     padding-top: 44px;
   }
 
@@ -100,12 +99,11 @@ section {
     margin-left: -24px;
     // background-color: $gray-light;
     border-top: $ui-seperator-width solid $ui-seperator-color;
-    border-bottom: $ui-seperator-width solid $gray-light;
     transition: border .25s, top .25s;
     align-items: center;
     justify-content: space-between;
 
-    @include media("<tablet", "landscape") {
+    @include media("<tablet") {
       height: 44px;
     }
 
@@ -120,7 +118,7 @@ section {
       text-decoration: none;
       transition: background-color .25s, color .25s;
 
-      @include media("<tablet", "landscape") {
+      @include media("<tablet") {
         line-height: 44px;
       }
     }
@@ -129,15 +127,11 @@ section {
       position: fixed;
       top: auto;
       bottom: 0;
-      background-color: $gray-light;
+      background-color: $white;
 
       a {
         cursor: pointer;
         color: $red;
-
-        &:hover {
-          background-color: lighten($gray-light, 2%);
-        }
       }
     }
 
@@ -180,20 +174,43 @@ section {
 
 
   h1 {
-    @include type-displayll;
+    @include type-displayl;
+
+    margin-top: 44px;
 
     @include media(">=tablet") {
       @include type-displaylll;
-
-      max-width: 400px;
-      margin-left: 10%;
+      text-align: center;
+      margin-top: 32px;
+      margin-bottom: 24px;
     }
 
 
-    @include media("<tablet", "landscape") {
-      max-width: 375px;
+    @include media("<tablet") {
+      max-width: 300px;
       margin-bottom: 0;
-      margin-left: 10%;
+    }
+  }
+
+  .pill {
+    @include scut-center-transform(x);
+    margin-top: 8px;
+  }
+
+  .smoor-iphone {
+    @include scut-center-block(x);
+    margin-top: 96px;
+    margin-bottom: 32px;
+    width: 206px;
+    height: 426px;
+    background: url($svg-data-hero);
+    background-size: 206px 426px;
+
+    @include media(">=tablet") {
+      margin-top: 128px;
+      width: 412px;
+      height: 852px;
+      background-size: 412px 852px;
     }
   }
 }
@@ -207,7 +224,7 @@ section {
   > header {
     transform: translateY(-56px);
 
-    @include media("<tablet", "landscape") {
+    @include media("<tablet") {
       transform: translateY(-44px);
     }
   }

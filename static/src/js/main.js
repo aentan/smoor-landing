@@ -19,7 +19,7 @@ $(function() {
       $HeroHeader.removeClass('opaque');
     }
 
-    if ($body.scrollTop() > 400) {
+    if ($body.scrollTop() > 240) {
       $HeroHeader.addClass('show-cta');
     } else {
       $HeroHeader.removeClass('show-cta');
@@ -56,7 +56,7 @@ $(function() {
     e.preventDefault();
     var duration = Math.abs($(this.hash).offset().top - $body.scrollTop()) * .75;
     duration = (duration > 1000) ? 1000 : duration;
-    var offset = this.hash == "#client-work" ? $(this).height() * -2 : $(this).height() * -1;
+    var offset = this.hash == "#tenants" ? -128 : -84;
     $(window).stop(true).scrollTo(this.hash, {
       duration: duration,
       offset: offset,
