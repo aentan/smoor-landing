@@ -1,0 +1,30 @@
+
+html {
+  font-size : 62.5%;
+}
+
+body {
+  @include type-body();
+  color : $black;
+}
+
+h1 {
+  @include type-displaylll();
+}
+
+h2 {
+  @include type-displayl();
+}
+
+h3 {
+  @include type-displaym();
+}
+
+h4 {
+  @include type-displays();
+}
+
+a {
+  color           : $red;
+  text-decoration : none;
+}

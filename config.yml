@@ -1,0 +1,16 @@
+baseURL: "https://smoor.aenism.com/"
+languageCode: "en-us"
+title: "Smoor"
+permalinks:
+  ideas: /:title/
+  work: /:title/
+taxonomies:
+  category: "categories"
+  tag: "tags"
+pygmentsUseClasses: false
+PygmentsCodeFences: true
+pygmentsStyle: "paraiso-dark"
+copyright: "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+author:
+    name: "AenTan"
+    email: "hello@aentan.com"

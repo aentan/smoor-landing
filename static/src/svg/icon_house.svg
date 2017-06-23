@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_house</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="house" stroke="#F64662">
+            <path d="M0.5,23.5 L23.5,23.5" id="Shape" stroke-linecap="round"></path>
+            <rect id="Rectangle-path" stroke-linecap="round" x="3.5" y="13.5" width="17" height="10"></rect>
+            <polygon id="Shape" stroke-linecap="round" points="12 5 0.5 13.5 23.5 13.5"></polygon>
+            <polyline id="Shape" points="20.5 11.291 20.5 6.5 17.5 6.5 17.5 9.078"></polyline>
+            <rect id="Rectangle-path" x="6.5" y="16.5" width="3" height="5"></rect>
+            <rect id="Rectangle-path" x="12.5" y="16.5" width="5" height="3"></rect>
+            <rect id="Rectangle-path" x="5.5" y="21.5" width="5" height="2"></rect>
+        </g>
+    </g>
+</svg>

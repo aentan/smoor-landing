@@ -1,0 +1,227 @@
+// Resets
+// Body
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: $gray-light;
+}
+
+// Header
+body > header {
+  position: fixed;
+  display: flex;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  height: 84px;
+  width: 100%;
+  padding-right: 24px;
+  padding-left: 24px;
+  transition: background-color .25s, border .25s;
+  align-items: center;
+  justify-content: space-between;
+
+  a:first-child {
+    font-size: 2.0rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+
+    &:hover svg {
+      opacity: 0.7;
+    }
+  }
+
+  .pill {
+    opacity: 0;
+    transition: opacity .25s;
+  }
+
+  svg {
+    width: 60px;
+    transition: width .3s, opacity .3s;
+    margin-right: 8px;
+  }
+
+  &.opaque {
+    // background-color:       $gray-light;
+    // border-bottom:          $ui-seperator-width solid $ui-seperator-color;
+
+    svg {
+      width: 60px;
+    }
+  }
+
+  &.show-cta {
+    .pill {
+      opacity: 1;
+    }
+  }
+}
+
+// Main
+main {
+  height: 100%;
+  min-height: 100%;
+}
+
+// Sections
+section {
+  position: relative;
+  padding-top: 56px;
+  padding-bottom: 60px;
+  padding-right: 24px;
+  padding-left: 24px;
+  background-color: $gray-light;
+
+  @include media("<tablet", "landscape") {
+    padding-top: 44px;
+  }
+
+
+  > .wrapper {
+    @include media(">=tablet") {
+      max-width: 768px;
+    }
+  }
+
+  > header {
+    position: absolute;
+    display: flex;
+    top: 0;
+    height: 56px;
+    width: 100%;
+    margin-right: -24px;
+    margin-left: -24px;
+    // background-color: $gray-light;
+    border-top: $ui-seperator-width solid $ui-seperator-color;
+    border-bottom: $ui-seperator-width solid $gray-light;
+    transition: border .25s, top .25s;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media("<tablet", "landscape") {
+      height: 44px;
+    }
+
+
+    a {
+      display: block;
+      padding-right: 24px;
+      padding-left: 24px;
+      cursor: default;
+      color: $black;
+      line-height: 56px;
+      text-decoration: none;
+      transition: background-color .25s, color .25s;
+
+      @include media("<tablet", "landscape") {
+        line-height: 44px;
+      }
+    }
+
+    &.locked-bottom {
+      position: fixed;
+      top: auto;
+      bottom: 0;
+      background-color: $gray-light;
+
+      a {
+        cursor: pointer;
+        color: $red;
+
+        &:hover {
+          background-color: lighten($gray-light, 2%);
+        }
+      }
+    }
+
+    // &.locked-top {
+    //   background-color:     $gray-light;
+    //   border-bottom:        1px solid $gray;
+    //   border-top:           1px solid $gray-light;
+    //   position:             fixed;
+    //   top:                  0;
+    // }
+
+    h2 {
+      @include type-displays;
+
+      width: 100%;
+      margin: 0;
+
+      @include media(">tablet") {
+        @include type-displays;
+      }
+    }
+  }
+
+  p {
+    padding-right: 45px;
+  }
+}
+
+// Section Hero
+.hero {
+  z-index: 500;
+  box-sizing: border-box;
+
+  @include media(">=desktop") {
+  }
+
+
+  @include media("<tablet", "landscape") {
+  }
+
+
+  h1 {
+    @include type-displayll;
+
+    @include media(">=tablet") {
+      @include type-displaylll;
+
+      max-width: 400px;
+      margin-left: 10%;
+    }
+
+
+    @include media("<tablet", "landscape") {
+      max-width: 375px;
+      margin-bottom: 0;
+      margin-left: 10%;
+    }
+  }
+}
+
+// Section Tenants
+.tenants {
+  z-index: 600;
+  padding-top: .1px;
+  padding-bottom: 0;
+
+  > header {
+    transform: translateY(-56px);
+
+    @include media("<tablet", "landscape") {
+      transform: translateY(-44px);
+    }
+  }
+}
+
+// Section Ideas
+.landlords {
+  z-index: 700;
+  padding-bottom: 0;
+}
+
+// Copyright
+.copyright {
+  @include type-subhead;
+
+  text-align: center;
+}

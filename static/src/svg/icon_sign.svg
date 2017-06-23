@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_sign</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="sign" stroke="#F64662">
+            <polyline id="Shape" points="19.5 13 19.5 23.5 0.5 23.5 0.5 2.5 13 2.5"></polyline>
+            <path d="M7.627,16.869 L16.738,7.758" id="Shape"></path>
+            <path d="M14.5,4.055 C13.5,4.179 7.932,9.471 11.445,12.982 C12.673,14.211 15.414,14.017 18.719,10.714 C22.022,7.41 23.476,1.019 23.476,1.019 C23.476,1.019 20.24,1.477 17.267,2.781 C17.267,2.781 16.5,6.365 14.5,6.365 C14.5,5.528 14.5,4.055 14.5,4.055 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
