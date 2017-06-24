@@ -51,6 +51,15 @@ $(function() {
   adjustHeroHeader();
   adjustSectionHeaders();
 
+  // Early access form
+  $('[href^="#get-access"]').click(function() {
+    $('body').addClass('get-access-active');
+  });
+
+  $('.close-get-access').click(function() {
+    $('body').removeClass('get-access-active');
+  });
+
   // Scroll to
   $('a[href^="#"]').click(function(e) {
     e.preventDefault();

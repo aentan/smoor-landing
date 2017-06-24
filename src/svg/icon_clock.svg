@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
-    <title>icon_clock</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
-        <g id="clock" stroke="#F64662">
-            <polyline id="Shape" stroke-linecap="round" points="15 12.5 11.5 12.5 11.5 7"></polyline>
-            <path d="M23.5,19.5 C23.5,21.7 21.7,23.5 19.5,23.5 L4.5,23.5 C2.3,23.5 0.5,21.7 0.5,19.5 L0.5,4.5 C0.5,2.3 2.3,0.5 4.5,0.5 L19.5,0.5 C21.7,0.5 23.5,2.3 23.5,4.5 L23.5,19.5 Z" id="Shape"></path>
-            <circle id="Oval" cx="12" cy="12" r="8.5"></circle>
-        </g>
-    </g>
-</svg>
+<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>icon_clock</title><desc>Created with Sketch.</desc><g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round"><g id="clock" stroke="#F64662"><polyline id="Shape" stroke-linecap="round" points="15 12.5 11.5 12.5 11.5 7"/><path d="M23.5,19.5 C23.5,21.7 21.7,23.5 19.5,23.5 L4.5,23.5 C2.3,23.5 0.5,21.7 0.5,19.5 L0.5,4.5 C0.5,2.3 2.3,0.5 4.5,0.5 L19.5,0.5 C21.7,0.5 23.5,2.3 23.5,4.5 L23.5,19.5 Z" id="Shape"/><circle id="Oval" cx="12" cy="12" r="8.5"/></g></g></svg>

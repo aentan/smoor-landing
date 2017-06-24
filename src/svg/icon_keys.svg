@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
-    <title>icon_keys</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="keys" stroke="#F64662">
-            <path d="M13.5,9 C13.5,5.962 11.037,3.5 8,3.5 C4.963,3.5 2.5,5.962 2.5,9 C2.5,11.517 4.193,13.634 6.5,14.287 L6.5,15.5 L5.5,16.499 L6.5,17.5 L6.5,18.5 L5.5,19.5 L6.5,20.5 L6.5,22 L8,23.5 L9.5,22 L9.5,14.287 C11.807,13.634 13.5,11.517 13.5,9 Z" id="Shape"></path>
-            <circle id="Oval" cx="8" cy="7" r="1.5"></circle>
-            <path d="M9.5,15.013 C11.172,15.978 13.242,15.986 14.925,15.046 L16,16 L16,17.5 L17.5,17.5 L18,18.024 L18,19.5 L19.317,19.5 L20.379,20.5 L22.5,20.5 L22.5,18.379 L17.046,12.925 C18.216,10.832 17.915,8.137 16.136,6.358 C14.882,5.104 13.174,4.582 11.541,4.792" id="Shape"></path>
-            <path d="M8,7 L8,2.5 C8,1.396 8.896,0.5 10,0.5 C11.104,0.5 12,1.396 12,2.5 L12,4.752" id="Shape"></path>
-        </g>
-    </g>
-</svg>
+<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>icon_keys</title><desc>Created with Sketch.</desc><g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="keys" stroke="#F64662"><path d="M13.5,9 C13.5,5.962 11.037,3.5 8,3.5 C4.963,3.5 2.5,5.962 2.5,9 C2.5,11.517 4.193,13.634 6.5,14.287 L6.5,15.5 L5.5,16.499 L6.5,17.5 L6.5,18.5 L5.5,19.5 L6.5,20.5 L6.5,22 L8,23.5 L9.5,22 L9.5,14.287 C11.807,13.634 13.5,11.517 13.5,9 Z" id="Shape"/><circle id="Oval" cx="8" cy="7" r="1.5"/><path d="M9.5,15.013 C11.172,15.978 13.242,15.986 14.925,15.046 L16,16 L16,17.5 L17.5,17.5 L18,18.024 L18,19.5 L19.317,19.5 L20.379,20.5 L22.5,20.5 L22.5,18.379 L17.046,12.925 C18.216,10.832 17.915,8.137 16.136,6.358 C14.882,5.104 13.174,4.582 11.541,4.792" id="Shape"/><path d="M8,7 L8,2.5 C8,1.396 8.896,0.5 10,0.5 C11.104,0.5 12,1.396 12,2.5 L12,4.752" id="Shape"/></g></g></svg>
