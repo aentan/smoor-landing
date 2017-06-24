@@ -52,16 +52,18 @@ $(function() {
   adjustSectionHeaders();
 
   // Early access form
-  $('[href^="#get-access"]').click(function() {
+  $('[href^="#get-access"]').click(function(e) {
+    e.preventDefault();
     $('body').addClass('get-access-active');
   });
 
-  $('.close-get-access').click(function() {
+  $('.close-get-access').click(function(e) {
+    e.preventDefault();
     $('body').removeClass('get-access-active');
   });
 
   // Scroll to
-  $('a[href^="#"]').click(function(e) {
+  $('section header a[href^="#"]').click(function(e) {
     e.preventDefault();
     var duration = Math.abs($(this.hash).offset().top - $body.scrollTop()) * .75;
     duration = (duration > 1000) ? 1000 : duration;
