@@ -24,6 +24,11 @@ h4 {
   @include type-displays();
 }
 
+p.lead {
+  @include type-displays();
+  font-weight: normal;
+}
+
 a {
   color           : $red;
   text-decoration : none;

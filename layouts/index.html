@@ -14,7 +14,7 @@
     <main>
       <section class="hero">
         <h1>Free lettings for everyone. Forever.</h1>
-        <a href="#get-early-access" class="pill pill-large pill-red">Get Early Access</a>
+        <a href="#get-access" class="pill pill-large pill-red">Get Early Access</a>
         <div class="smoor-iphone"></div>
       </section>
       <section id="tenants" class="tenants">
@@ -24,7 +24,7 @@
           </h2>
         </header>
         <div class="wrapper">
-          <p>Everything a tenant needs. For free.</p>
+          <p class="lead">Everything a tenant needs. For free.</p>
           <ul class="features">
             <li>
               <div class="icon icon-house"></div>
@@ -47,6 +47,7 @@
               Move in
             </li>
           </ul>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </div>
       </section>
       <section id="landlords" class="landlords">
@@ -56,7 +57,7 @@
           </h2>
         </header>
         <div class="wrapper">
-          <p>Everything a landlord needs. For free.</p>
+          <p class="lead">Everything a landlord needs. For free.</p>
           <ul class="features">
             <li>
               <div class="icon icon-house"></div>
@@ -84,9 +85,10 @@
             </li>
             <li>
               <div class="icon icon-keys"></div>
-              Move in
+              Organize move-ins and outs
             </li>
           </ul>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nemo enim ipsam voluptatem.</p>
         </div>
       </section>
       <section id="professionals" class="professionals">
@@ -108,9 +110,37 @@
           </ul>
         </div>
       </section>
+      <section id="professionals" class="professionals">
+        <div class="wrapper">
+          <h3>Meet the Team</h3>
+          <div class="team-list">
+            <figure class="team-member">
+              <img src="/img/team_imran.jpg" alt="Imran Ahmad">
+              <h4>Imran Khan</h4>
+              Co-founder
+            </figure>
+            <figure class="team-member">
+              <img src="/img/team_aneel.jpg" alt="Imran Ahmad">
+              <h4>Aneel Yasim</h4>
+              Co-founder
+            </figure>
+            <figure class="team-member">
+              <img src="/img/team_umar.jpg" alt="Imran Ahmad">
+              <h4>Umar Akram</h4>
+              CPO
+            </figure>
+            <figure class="team-member">
+              <img src="/img/team_khayam.jpg" alt="Imran Ahmad">
+              <h4>Khayam Khan</h4>
+              Creative
+            </figure>
+          </div>
+        </div>
+      </section>
       <section class="copyright">&copy; Smoor</section>
     </main>
     {{ partial "footer.html" . }}
+    {{ partial "get-access.html" . }}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/{{ index .Site.Data.js.hash "main.js" }}"></script>
   </body>

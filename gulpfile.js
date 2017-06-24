@@ -34,26 +34,6 @@ gulp.task("scss", function () {
         .pipe(hash.manifest("hash.json"))
         //Put the map in the data directory
         .pipe(gulp.dest("data/css"))
-
-    //Delete our old css files
-    del(["static/demo/css/*"])
-
-    //compile hashed css files
-    gulp.src(["static/demo/src/css/*"])
-        .pipe(sass({
-            outputStyle : "compressed"
-        }))
-        .pipe(autoprefixer({
-            browsers : ["last 20 versions"]
-        }))
-        .pipe(cssmin())
-        // .pipe(gzip())
-        .pipe(hash())
-        .pipe(gulp.dest("static/demo/css"))
-        //Create a hash map
-        .pipe(hash.manifest("hash.json"))
-        //Put the map in the data directory
-        .pipe(gulp.dest("data/demo/css"))
 })
 
 gulp.task("img", function () {
