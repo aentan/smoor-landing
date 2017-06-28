@@ -216,12 +216,75 @@ section {
     height: 426px;
     background: url($svg-data-hero);
     background-size: 206px 426px;
+    position: relative;
 
     @include media(">=tablet") {
       margin-top: 128px;
       width: 412px;
       height: 852px;
       background-size: 412px 852px;
+    }
+  }
+}
+
+.hero-people {
+  background-image: url($jpg-data-people-sprite);
+  background-size: 272px 224px;
+  position: absolute;
+
+  @include media("<tablet") {
+    background-size: 204px 168px;
+  }
+
+  &-tenant {
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    left: -27%;
+    top: 11%;
+
+    @include media("<tablet") {
+      width: 120px;
+      height: 120px;
+      border-radius: 60px;
+      left: -47%;
+      top: 13%;
+    }
+  }
+
+  &-landlord {
+    width: 112px;
+    height: 112px;
+    border-radius: 56px;
+    background-position: -160px -112PX;
+    left: 105%;
+    top: 15%;
+
+    @include media("<tablet") {
+      width: 84px;
+      height: 84px;
+      border-radius: 42px;
+      background-position: -120px -84px;
+      left: 105%;
+      top: 17%;
+    }
+  }
+
+  &-professional {
+    width: 112px;
+    height: 112px;
+    border-radius: 56px;
+    background-position: -160px 0;
+    left: 55%;
+    top: 39%;
+
+    @include media("<tablet") {
+      width: 84px;
+      height: 84px;
+      border-radius: 42px;
+      background-position: -120px 0;
+      left: 62%;
+      top: 51%;
     }
   }
 }
