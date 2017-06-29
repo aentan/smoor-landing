@@ -75,4 +75,21 @@ $(function() {
     });
   });
 
+  // Hero slides
+  var totalSlides = $('.hero-screens img').length;
+  var slideIndex = 1;
+
+  function showSlide(n) {
+    $('.hero-screens img').fadeOut();
+    $('.hero-screens img:nth-child(' + n + ')').stop().fadeIn();
+  }
+
+  setInterval(function() {
+    if (slideIndex > totalSlides) {
+      slideIndex = 1;
+    }
+    showSlide(slideIndex);
+    slideIndex++;
+  }, 4000);
+
 });
