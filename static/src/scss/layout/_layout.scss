@@ -472,7 +472,7 @@ section {
   img {
     width: 128px;
     height: 96px;
-    border-radius: 48px;
+    border-radius: 8px;
   }
   h4 {
     @include type-headline;
@@ -526,6 +526,7 @@ section {
 #mc_embed_signup {
   max-width: 480px;
   text-align: center;
+  width: 100%;
 
   form,
   .mc-field-group {
@@ -535,11 +536,18 @@ section {
     flex-direction: column;
   }
 
+  .mc-field-group.input-group {
+    display: block;
+    text-align: left;
+  }
+
   .mc-field-group {
     margin-bottom: 16px;
+    width: 100%;
 
     input[type="text"],
-    input[type="email"] {
+    input[type="email"],
+    select {
       @include type-body;
 
       outline: none;
@@ -550,11 +558,23 @@ section {
       display: block;
       color: $white;
       text-align: center;
+      box-sizing: border-box;
+      width: 100%;
 
       &::placeholder {
         color: rgba($white, 0.5);
         text-align: center;
       }
+    }
+
+    select {
+      height: 48px;
+      -webkit-appearance: none;
+      background: url($svg-icon-dropdown-white) no-repeat calc(100% - 10px) 50%;
+    }
+
+    label {
+      margin-bottom: 12px;
     }
   }
 
