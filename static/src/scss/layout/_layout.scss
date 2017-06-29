@@ -523,6 +523,57 @@ section {
   }
 }
 
+#mc_embed_signup {
+  max-width: 480px;
+  text-align: center;
+
+  form,
+  .mc-field-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .mc-field-group {
+    margin-bottom: 16px;
+
+    input[type="text"],
+    input[type="email"] {
+      @include type-body;
+
+      outline: none;
+      border: 1px solid $white;
+      border-radius: 8px;
+      background-color: $red;
+      padding: 13px 16px;
+      display: block;
+      color: $white;
+      text-align: center;
+
+      &::placeholder {
+        color: rgba($white, 0.5);
+        text-align: center;
+      }
+    }
+  }
+
+  div.mce_inline_error {
+    margin: 8px 0 0 !important;
+    border-radius: 8px;
+    background-color: darken($red, 16%) !important;
+  }
+
+  .response {
+    margin-bottom: 16px;
+  }
+}
+
+#mc-embedded-subscribe {
+  color: $red;
+  cursor: pointer;
+}
+
 // Copyright
 .copyright {
   @include type-subhead;
