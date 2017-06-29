@@ -80,8 +80,8 @@ $(function() {
   var slideIndex = 1;
 
   function showSlide(n) {
-    $('.hero-screens img').fadeOut();
-    $('.hero-screens img:nth-child(' + n + ')').stop().fadeIn();
+    $('.hero-screens img').fadeOut(1000, 'swing');
+    $('.hero-screens img:nth-child(' + n + ')').stop().fadeIn(1000, 'swing');
   }
 
   setInterval(function() {
@@ -90,6 +90,6 @@ $(function() {
     }
     showSlide(slideIndex);
     slideIndex++;
-  }, 4000);
+  }, 5000);
 
 });
