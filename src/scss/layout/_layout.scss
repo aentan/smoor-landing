@@ -227,6 +227,39 @@ section {
   }
 }
 
+.hero-screens {
+  position: absolute;
+  left: 9.5px;
+  top: 47px;
+  width: 188px;
+  height: 334px;
+
+  @include media(">=tablet") {
+    left: 19px;
+    top: 93.5px;
+    width: 376px;
+    height: 668px;
+  }
+
+  img {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+
+    @include media(">=tablet") {
+      border-radius: 5px;
+    }
+
+    &:first-child {
+      display: block;
+    }
+  }
+}
+
 .hero-people {
   background-image: url($jpg-data-people-sprite);
   background-size: 272px 224px;
