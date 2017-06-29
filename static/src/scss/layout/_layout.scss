@@ -557,13 +557,11 @@ section {
       padding: 13px 16px;
       display: block;
       color: $white;
-      text-align: center;
       box-sizing: border-box;
       width: 100%;
 
       &::placeholder {
         color: rgba($white, 0.5);
-        text-align: center;
       }
     }
 
