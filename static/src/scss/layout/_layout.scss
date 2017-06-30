@@ -49,8 +49,6 @@ body > header {
   }
 
   &.opaque {
-    background-color:       $white;
-    border-bottom:          $ui-seperator-width solid $ui-seperator-color;
 
     svg {
       width: 60px;
@@ -67,16 +65,18 @@ body > header {
 // Main
 main {
   min-height: 100%;
+  height: 100%;
 }
 
 // Sections
 section {
+  @include scut-clearfix;
+
   position: relative;
   padding-top: 48px;
   padding-bottom: 64px;
   padding-right: 24px;
   padding-left: 24px;
-  background-color: $white;
 
   @include media("<tablet") {
     padding-top: 44px;
@@ -105,7 +105,6 @@ section {
     width: 100%;
     margin-right: -24px;
     margin-left: -24px;
-    // background-color: $gray-light;
     border-top: $ui-seperator-width solid $ui-seperator-color;
     transition: border .25s, top .25s;
     align-items: center;
@@ -124,7 +123,8 @@ section {
       color: $black;
       line-height: 48px;
       text-decoration: none;
-      transition: background-color .25s, color .25s;
+      opacity: 0;
+      transition: background-color .25s, color .25s, opacity .25s;
 
       @include media("<tablet") {
         line-height: 44px;
@@ -140,6 +140,7 @@ section {
       a {
         cursor: pointer;
         color: $red;
+        opacity: 1;
       }
     }
 
@@ -168,34 +169,227 @@ section {
 .hero {
   z-index: 500;
   box-sizing: border-box;
-  padding-bottom: 112px;
+  height: calc(100% - 72px);
+  position: relative;
+  background-color: #f7f9f8;
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/img/hero_couple_phone.jpg');
+
+  @include media("<=phone") {
+    background-image: url('/img/hero_couple_phone.jpg');
+    background-size: 480px 453.5px;
+    height: calc(100% - 88px);
+  }
+
+  @include media(">phone") {
+    background-image: url('/img/hero_couple_desktop.jpg');
+    height: calc(100% - 72px);
+  }
+
+  @include media(">=tablet") {
+    background-image: url('/img/hero_couple_tablet.jpg');
+    background-size: 1024px 680px;
+    height: calc(100% - 96px);
+  }
 
   @include media(">=desktop") {
+    background-image: url('/img/hero_couple_desktop.jpg');
+    background-size: 1440px 604.5px;
   }
-
-
-  @include media("<tablet", "landscape") {
-  }
-
 
   h1 {
     @include type-displayl;
 
-    margin-top: 44px;
+    text-align: center;
+    margin-top: 48px;
+
+    @include media("<=phone") {
+      margin-top: 40px;
+    }
+
+    @include media(">phone", "<=tablet") {
+      margin-top: 24px;
+    }
 
     @include media(">=tablet") {
-      text-align: center;
-      margin-top: 32px;
-      margin-bottom: 24px;
+      margin-top: 192px;
+    }
+
+    @include media(">=tablet", "landscape") {
+      margin-top: 80px;
     }
 
     @include media(">=desktop") {
       @include type-displaylll;
     }
 
+    @include media(">=hd") {
+      margin-top: 112px;
+    }
+  }
 
-    @include media("<tablet") {
-      margin-bottom: 0;
+  .discover {
+    @include scut-center-block;
+    background: url($svg-icon-scrolldown) center;
+    width: 22px;
+    height: 22px;
+  }
+
+  .doodle {
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  .doodle-lamp {
+    background-image: url($svg-doodle-lamp);
+    width: 134px;
+    height: 190px;
+    left: 50%;
+    top: 0;
+
+    @include media("<=phone") {
+      background-size: 67px 95px;
+      width: 67px;
+      height: 95px;
+      margin-left: -33.5px;
+      top: -2%;
+    }
+
+    @include media(">phone", "<tablet") {
+      background-size: 67px 95px;
+      width: 67px;
+      height: 95px;
+      margin-left: -33.5px;
+      top: -5%;
+    }
+
+    @include media(">=tablet") {
+      margin-left: -66px;
+    }
+
+    @include media(">=desktop") {
+      top: 0;
+    }
+
+    @include media(">=hd") {
+      top: -5%;
+    }
+  }
+
+  .doodle-picture {
+    background-image: url($svg-doodle-picture);
+    width: 151px;
+    height: 136px;
+
+    @include media("<=phone") {
+      background-size: 75.5px 68px;
+      width: 75.5px;
+      height: 68px;
+      right: 6%;
+      top: 11%;
+    }
+
+    @include media(">phone", "<tablet") {
+      background-size: 75.5px 68px;
+      width: 75.5px;
+      height: 68px;
+      right: 19%;
+      top: 11%;
+    }
+
+    @include media(">=tablet") {
+      right: 8%;
+      top: 12%;
+    }
+
+    @include media(">=desktop") {
+      right: 19%;
+      top: 14%;
+    }
+  }
+
+  .doodle-shelf {
+    background-image: url($svg-doodle-shelf);
+    width: 168px;
+    height: 490px;
+    right: -10%;
+    bottom: 5%;
+
+    @include media("<=phone") {
+      background-size: 84px 245px;
+      width: 84px;
+      height: 245px;
+    }
+
+    @include media(">phone", "<tablet") {
+      background-size: 84px 245px;
+      width: 84px;
+      height: 245px;
+      right: 0;
+    }
+
+    @include media(">=tablet") {
+      right: 0;
+    }
+
+    @include media(">=desktop") {
+    }
+  }
+
+  .doodle-stool {
+    background-image: url($svg-doodle-stool);
+    width: 151px;
+    height: 148px;
+    bottom: 5%;
+    left: -10%;
+
+    @include media("<=phone") {
+      background-size: 75.5px 74px;
+      width: 75.5px;
+      height: 74px;
+    }
+
+    @include media(">phone", "<tablet") {
+      background-size: 75.5px 74px;
+      width: 75.5px;
+      height: 74px;
+      left: 10%;
+    }
+
+    @include media(">=tablet") {
+      left: -4%;
+    }
+
+    @include media(">=desktop") {
+      left: 10%;
+    }
+  }
+
+  .doodle-window {
+    background-image: url($svg-doodle-window);
+    width: 227px;
+    height: 284px;
+    left: 0;
+    top: 0;
+
+    @include media("<=phone") {
+      background-size: 113.5px 142px;
+      width: 113.5px;
+      height: 142px;
+    }
+
+    @include media(">phone", "<tablet") {
+      background-size: 113.5px 142px;
+      width: 113.5px;
+      height: 142px;
+    }
+
+    @include media(">=tablet") {
+    }
+
+    @include media(">=desktop") {
     }
   }
 
@@ -322,8 +516,14 @@ section {
   }
 }
 
-// Section Tenants
-.tenants {
+// Section summary
+.summary {
+  border-top: $ui-seperator-width solid $ui-seperator-color;
+  padding-bottom: 112px;
+}
+
+// Section Landlords
+.landlords {
   z-index: 600;
   padding-top: .1px;
 
@@ -336,8 +536,8 @@ section {
   }
 }
 
-// Section Landlords
-.landlords {
+// Section Tenants
+.tenants {
   z-index: 700;
   border-bottom: $ui-seperator-width solid $ui-seperator-color;
 }
