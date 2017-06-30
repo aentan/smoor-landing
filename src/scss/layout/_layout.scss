@@ -424,6 +424,7 @@ section {
 .summary {
   border-top: $ui-seperator-width solid $ui-seperator-color;
   padding-bottom: 112px;
+  overflow: hidden;
 
   @include media(">=tablet") {
     .left,
@@ -436,18 +437,19 @@ section {
 .smoor-iphone {
     @include scut-center-block(x);
     margin-top: 32px;
-    margin-bottom: 32px;
     width: 206px;
     height: 426px;
     background: url($svg-data-hero);
     background-size: 206px 426px;
     position: relative;
+    margin-bottom: -112px;
 
-    // @include media(">=tablet") {
-    //   width: 412px;
-    //   height: 852px;
-    //   background-size: 412px 852px;
-    // }
+    @include media(">=tablet") {
+      width: 309px;
+      height: 639px;
+      background-size: 309px 639px;
+      margin-bottom: -168px;
+    }
   }
 
 .hero-screens {
@@ -457,12 +459,12 @@ section {
   width: 188px;
   height: 334px;
 
-  // @include media(">=tablet") {
-  //   left: 19px;
-  //   top: 93.5px;
-  //   width: 376px;
-  //   height: 668px;
-  // }
+  @include media(">=tablet") {
+    left: 14.25px;
+    top: 70.5px;
+    width: 282px;
+    height: 501px;
+  }
 
   img {
     display: none;
