@@ -172,6 +172,7 @@ section {
   box-sizing: border-box;
   height: calc(100% - 72px);
   max-height: 768px;
+  overflow: hidden;
   position: relative;
   background-color: #f7f9f8;
   background-position: center bottom;
