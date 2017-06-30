@@ -88,11 +88,12 @@ section {
     @include media(">=tablet") {
       @include scut-center-block;
       max-width: 960px;
+    }
 
-      p {
-        text-align: center;
-        padding-left: 144px;
-        padding-right: 144px;
+    @include media(">=tablet") {
+      &.wrapper-flex {
+        display: flex;
+        align-items: center;
       }
     }
   }
@@ -194,7 +195,7 @@ section {
   @include media(">=tablet") {
     background-image: url('/img/hero_couple_tablet.jpg');
     background-size: 1024px 680px;
-    height: calc(100% - 96px);
+    max-height: calc(100% - 96px);
   }
 
   @include media(">=desktop") {
@@ -202,8 +203,13 @@ section {
     background-size: 1440px 604.5px;
   }
 
+  @include media(">=desktop", "portrait") {
+    max-height: 768px;
+  }
+
   @include media(">=hd") {
     background-size: contain;
+    max-height: calc(100% - 96px);
   }
 
   h1 {
@@ -281,7 +287,6 @@ section {
     }
 
     @include media(">=hd") {
-      top: -5%;
     }
   }
 
@@ -377,26 +382,27 @@ section {
   .doodle-window {
     background-image: url($svg-doodle-window);
     width: 227px;
-    height: 284px;
+    height: 302px;
     left: 0;
-    top: 0;
+    top: 15%;
 
     @include media("<=phone") {
-      background-size: 113.5px 142px;
+      background-size: 113.5px 151px;
       width: 113.5px;
-      height: 142px;
+      height: 151px;
     }
 
     @include media(">phone", "<tablet") {
-      background-size: 113.5px 142px;
+      background-size: 113.5px 151px;
       width: 113.5px;
-      height: 142px;
+      height: 151px;
     }
 
     @include media(">=tablet") {
     }
 
     @include media(">=desktop") {
+      top: 20%;
     }
   }
 
@@ -408,10 +414,24 @@ section {
       margin-top: 8px;
     }
   }
+}
 
-  .smoor-iphone {
+// Section summary
+.summary {
+  border-top: $ui-seperator-width solid $ui-seperator-color;
+  padding-bottom: 112px;
+
+  @include media(">=tablet") {
+    .left,
+    .right {
+      width: 50%;
+    }
+  }
+}
+
+.smoor-iphone {
     @include scut-center-block(x);
-    margin-top: 96px;
+    margin-top: 32px;
     margin-bottom: 32px;
     width: 206px;
     height: 426px;
@@ -419,14 +439,12 @@ section {
     background-size: 206px 426px;
     position: relative;
 
-    @include media(">=tablet") {
-      margin-top: 128px;
-      width: 412px;
-      height: 852px;
-      background-size: 412px 852px;
-    }
+    // @include media(">=tablet") {
+    //   width: 412px;
+    //   height: 852px;
+    //   background-size: 412px 852px;
+    // }
   }
-}
 
 .hero-screens {
   position: absolute;
@@ -435,12 +453,12 @@ section {
   width: 188px;
   height: 334px;
 
-  @include media(">=tablet") {
-    left: 19px;
-    top: 93.5px;
-    width: 376px;
-    height: 668px;
-  }
+  // @include media(">=tablet") {
+  //   left: 19px;
+  //   top: 93.5px;
+  //   width: 376px;
+  //   height: 668px;
+  // }
 
   img {
     display: none;
@@ -459,74 +477,6 @@ section {
       display: block;
     }
   }
-}
-
-.hero-people {
-  background-image: url($jpg-data-people-sprite);
-  background-size: 272px 224px;
-  position: absolute;
-
-  @include media("<tablet") {
-    background-size: 204px 168px;
-  }
-
-  &-tenant {
-    width: 160px;
-    height: 160px;
-    border-radius: 80px;
-    left: -27%;
-    top: 11%;
-
-    @include media("<tablet") {
-      width: 120px;
-      height: 120px;
-      border-radius: 60px;
-      left: -47%;
-      top: 13%;
-    }
-  }
-
-  &-landlord {
-    width: 112px;
-    height: 112px;
-    border-radius: 56px;
-    background-position: -160px -112PX;
-    left: 105%;
-    top: 15%;
-
-    @include media("<tablet") {
-      width: 84px;
-      height: 84px;
-      border-radius: 42px;
-      background-position: -120px -84px;
-      left: 105%;
-      top: 17%;
-    }
-  }
-
-  &-professional {
-    width: 112px;
-    height: 112px;
-    border-radius: 56px;
-    background-position: -160px 0;
-    left: 55%;
-    top: 39%;
-
-    @include media("<tablet") {
-      width: 84px;
-      height: 84px;
-      border-radius: 42px;
-      background-position: -120px 0;
-      left: 62%;
-      top: 51%;
-    }
-  }
-}
-
-// Section summary
-.summary {
-  border-top: $ui-seperator-width solid $ui-seperator-color;
-  padding-bottom: 112px;
 }
 
 // Section Landlords
@@ -699,7 +649,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
   background-color: $red;
@@ -724,6 +674,7 @@ section {
 
 .get-access-active {
   overflow: hidden;
+  z-index: 0;
   .get-access {
     opacity: 1;
     z-index: 1000;
