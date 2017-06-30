@@ -217,6 +217,9 @@ section {
 
     text-align: center;
     margin-top: 48px;
+    color: $red;
+    position: relative;;
+    z-index: 1;
 
     @include media("<=phone") {
       margin-top: 40px;
@@ -253,6 +256,7 @@ section {
   .doodle {
     position: absolute;
     background-repeat: no-repeat;
+    z-index: 0;
   }
 
   .doodle-lamp {
@@ -624,12 +628,21 @@ section {
 }
 
 .team-member {
+  box-sizing: border-box;
   margin-bottom: 16px;
+
+  @include media("<=phone") {
+    width: 100%;
+  }
+
+  @include media(">phone", "<desktop") {
+    width: 30%;
+  }
 
   img {
     width: 128px;
-    height: 96px;
-    border-radius: 8px;
+    height: 128px;
+    border-radius: 64px;
   }
   h4 {
     @include type-headline;
