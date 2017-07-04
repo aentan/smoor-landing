@@ -500,7 +500,7 @@ section {
 .landlords {
   z-index: 600;
   position: relative;
-  padding-bottom: 400px;
+  padding-bottom: 360px;
   background-image: url('/img/hero_landlord_phone.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -540,11 +540,32 @@ section {
 // Section Tenants
 .tenants {
   z-index: 700;
-  .wrapper {
-    @include media(">tablet") {
-      padding-right: 25%;
-      width: 50%;
-    }
+  padding-bottom: 400px;
+  background-image: url('/img/hero_tenant_phone.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  overflow: hidden;
+
+  @include media(">phone", "landscape") {
+    padding-bottom: 240px;
+    background-image: url('/img/hero_tenant_tablet.png');
+  }
+
+  @include media(">=tablet") {
+    background-image: url('/img/hero_tenant_tablet.png');
+    padding-bottom: 192px;
+    min-height: 640px;
+    box-sizing: border-box;
+    background-size: contain;
+  }
+
+  @include media(">=tablet", "portrait") {
+    background-position: 0 bottom;
+  }
+
+  @include media(">=desktop") {
+    background-image: url('/img/hero_tenant_desktop.png');
   }
 }
 
