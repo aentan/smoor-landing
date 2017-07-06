@@ -500,7 +500,7 @@ section {
 .landlords {
   z-index: 600;
   position: relative;
-  padding-bottom: 360px;
+  padding-bottom: 400px;
   background-image: url('/img/hero_landlord_phone.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -508,7 +508,7 @@ section {
   overflow: hidden;
 
   @include media(">phone", "landscape") {
-    padding-bottom: 380px;
+    padding-bottom: 420px;
     background-image: url('/img/hero_landlord_tablet.png');
   }
 
@@ -572,10 +572,37 @@ section {
 // Section Professionals
 .professionals {
   z-index: 800;
-  padding-top: 16px;
+  padding-bottom: 256px;
+  background-image: url('/img/hero_negotiator_phone.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+  overflow: hidden;
 
-  h3 {
-    text-align: center;
+  @include media(">phone", "landscape") {
+    background-image: url('/img/hero_negotiator_tablet.jpg');
+    padding-bottom: 320px;
+  }
+
+  @include media(">=tablet") {
+    background-image: url('/img/hero_negotiator_tablet.jpg');
+    min-height: 640px;
+    box-sizing: border-box;
+    background-size: 864px 420px;
+    padding-bottom: 240px;
+  }
+
+  @include media(">=tablet", "portrait") {
+    padding-bottom: 384px;
+  }
+
+  @include media(">=desktop") {
+    background-image: url('/img/hero_negotiator_desktop.jpg');
+    background-size: 864px 420px;
+
+    .features li {
+      width: 128px;
+    }
   }
 }
 
@@ -824,4 +851,40 @@ section {
   @include type-subhead;
 
   text-align: center;
+}
+
+.sosh {
+  text-align: center;
+  padding: 0;
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  li {
+    @include scut-list-unstyled;
+
+    display: inline-block;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  a {
+    @include scut-image-replace;
+
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+  }
+
+  .sosh-facebook {
+    background-image: url($svg-sosh-facebook);
+  }
+
+  .sosh-instagram {
+    background-image: url($svg-sosh-instagram);
+  }
+
+  .sosh-twitter {
+    background-image: url($svg-sosh-twitter);
+  }
 }
