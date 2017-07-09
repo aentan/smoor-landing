@@ -501,7 +501,7 @@ section {
   z-index: 600;
   position: relative;
   padding-bottom: 400px;
-  background-image: url('/img/hero_landlord_phone.png');
+  background-image: url('/img/hero_landlord_phone.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
@@ -509,11 +509,11 @@ section {
 
   @include media(">phone", "landscape") {
     padding-bottom: 420px;
-    background-image: url('/img/hero_landlord_tablet.png');
+    background-image: url('/img/hero_landlord_tablet.jpg');
   }
 
   @include media(">=tablet") {
-    background-image: url('/img/hero_landlord_tablet.png');
+    background-image: url('/img/hero_landlord_tablet.jpg');
     padding-bottom: 0;
     min-height: 640px;
     box-sizing: border-box;
@@ -525,7 +525,7 @@ section {
   }
 
   @include media(">=desktop") {
-    background-image: url('/img/hero_landlord_desktop.png');
+    background-image: url('/img/hero_landlord_desktop.jpg');
   }
 
   > header {
@@ -541,7 +541,7 @@ section {
 .tenants {
   z-index: 700;
   padding-bottom: 400px;
-  background-image: url('/img/hero_tenant_phone.png');
+  background-image: url('/img/hero_tenant_phone.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
@@ -549,11 +549,11 @@ section {
 
   @include media(">phone", "landscape") {
     padding-bottom: 240px;
-    background-image: url('/img/hero_tenant_tablet.png');
+    background-image: url('/img/hero_tenant_tablet.jpg');
   }
 
   @include media(">=tablet") {
-    background-image: url('/img/hero_tenant_tablet.png');
+    background-image: url('/img/hero_tenant_tablet.jpg');
     padding-bottom: 192px;
     min-height: 640px;
     box-sizing: border-box;
@@ -565,7 +565,7 @@ section {
   }
 
   @include media(">=desktop") {
-    background-image: url('/img/hero_tenant_desktop.png');
+    background-image: url('/img/hero_tenant_desktop.jpg');
   }
 }
 
