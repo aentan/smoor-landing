@@ -390,6 +390,7 @@ section {
     margin-top: 48px;
     position: relative;;
     z-index: 1;
+    color: $red;
 
     @include media("<=phone") {
       margin-top: 40px;
